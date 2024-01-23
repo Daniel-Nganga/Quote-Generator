@@ -43,6 +43,7 @@ body {
 }
 
 #button {
+  color: aliceblue;
   background-color: rgba(37, 73, 61, 0.658);
   margin-top: 10px;
   padding: 8px 16px;
