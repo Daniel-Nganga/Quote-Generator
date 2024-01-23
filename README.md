@@ -1,0 +1,2 @@
+# quotes-generator
+motivation quotes
