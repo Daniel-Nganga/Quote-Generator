@@ -1,0 +1,58 @@
+body {
+  font-family: Inconsolata;
+}
+#quote-plate {
+  width: 50%;
+  height: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  background-color: rgba(128, 97, 97, 0.233);
+  text-align: center;
+}
+
+#heading h1,
+#heading p {
+  background-color: rgba(119, 43, 43, 0.514);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#quote {
+  height: 70%; /* Adjust the height dynamically based on remaining space after heading */
+  box-shadow: 1px 2px 4px rgb(0, 0, 0);
+  background-color: white;
+  border-radius: 5px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#quote p,
+#quote h2 {
+  padding: 10px;
+  text-align: center;
+  max-width: 80%;
+  margin: 0 auto;
+  font-size: 25px;
+}
+#quote h2 {
+  font-weight: bold;
+}
+
+#button {
+  background-color: rgba(37, 73, 61, 0.658);
+  margin-top: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#button:hover {
+  background-color: #030202; /* Add a different color for the hover effect */
+}
