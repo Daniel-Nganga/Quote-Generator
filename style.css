@@ -20,7 +20,7 @@ body {
 }
 
 #quote {
-  height: 70%; /* Adjust the height dynamically based on remaining space after heading */
+  height: 70%; 
   box-shadow: 1px 2px 4px rgb(0, 0, 0);
   background-color: white;
   border-radius: 5px;
@@ -54,5 +54,16 @@ body {
 }
 
 #button:hover {
-  background-color: #030202; /* Add a different color for the hover effect */
+  background-color: #030202; 
+}
+/* Media queries for responsiveness */
+@media screen and (max-width: 600px) {
+  #quote-plate {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+
+  #quote p,
+  #quote h2 {
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
 }
