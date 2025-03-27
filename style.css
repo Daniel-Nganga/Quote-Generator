@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   font-family: Inconsolata;
 }
@@ -68,3 +69,152 @@ body {
     font-size: 18px; /* Adjust font size for smaller screens */
   }
 }
+=======
+body {
+  font-family: Inconsolata;
+}
+#quote-plate {
+  width: 60%;
+  height: auto;
+  margin: 0 auto;
+  padding: 20px 20px;
+  box-shadow: 0 2px 4px rgba(240, 31, 31, 0.1);
+  border-radius: 3px;
+  background-color: rgba(240, 0, 0, 0.233);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+#heading h1,
+#heading p {
+  background-color: rgba(119, 43, 43, 0.514);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#quote {
+  height: 70%; 
+  box-shadow: 1px 2px 4px rgb(0, 0, 0);
+  background-color: white;
+  border-radius: 5px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#quote p,
+#quote h2 {
+  padding: 10px;
+  text-align: center;
+  max-width: 80%;
+  margin: 0 auto;
+  font-size: 25px;
+}
+#quote h2 {
+  font-weight: bold;
+}
+.butons-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  justify-content: space-between; 
+ gap: 20px;
+
+ 
+}
+
+.butons-container button {
+  color: aliceblue;
+  background-color: rgba(37, 73, 61, 0.658);
+ 
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#button:hover {
+  background-color: #030202; 
+}
+
+.adding_quote-container {
+  display: none;
+  /*display: flex;*/
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#quote_input {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  resize: none;
+  outline: none;
+}
+
+#author_input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+#add_quote_button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background-color: rgba(119, 43, 43, 0.514);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+#add_quote_button:hover {
+  background: #0056b3;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 600px) {
+  #quote-plate {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+
+  #quote p,
+  #quote h2 {
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
+
+  .adding_quote-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 95%;
+  }
+}
+>>>>>>> ad4ca09 (Initial commit~)

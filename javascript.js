@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 let quots = document.getElementById("quote");
 let index = 0;
 let para = document.createElement("p");
@@ -56,3 +57,99 @@ function quoteckick() {
   owner.textContent = arrayOwner[index];
   quots.appendChild(owner);
 }
+=======
+let quots = document.getElementById("quote");
+let index = 0;
+let para = document.createElement("p");
+let owner = document.createElement("h2");
+
+let array = JSON.parse(localStorage.getItem("quotes"))|| [
+ 
+];
+let arrayOwner =JSON.parse(localStorage.getItem("authors"))|| [
+  
+  
+];
+
+quots.appendChild(para);
+quots.appendChild(owner);
+function saveToLocalStorage(){
+  localStorage.setItem("quotes", JSON.stringify(array))
+  localStorage.setItem("authors",JSON.stringify(arrayOwner))
+}
+
+
+function displayQuote(){
+  if(array.length>0){
+    para.textContent=array[index]
+    owner.textContent=arrayOwner[index]
+  }else{
+    para.textContent="No quote Available"
+    owner.textContent=""
+  }
+}
+
+function quoteckick() {
+  if (array.length === 0)return ;
+   index =(index+1)%array.length
+
+  displayQuote()
+  
+}
+
+const add_quote_button= document.getElementById("add_quote_button");
+
+let addingQuoteContainer = document.querySelector(".adding_quote-container");
+ const adding_quote_buttob= document.getElementById("adding_quote_buttob");
+ function showAddQuateContainer(){
+  addingQuoteContainer.style.display="flex"
+
+}
+ adding_quote_buttob.addEventListener("click", showAddQuateContainer);
+
+
+
+//adding quotes fuction
+function addQuote(){
+  const quote_input= document.getElementById("quote_input").value;
+const author_input= document.getElementById("author_input").value;
+const messageBox = document.getElementById("message");
+  if(quote_input && author_input){
+    array.push(quote_input)
+    arrayOwner.push(author_input)
+
+    // Save updated arrays to localStorage
+    saveToLocalStorage(); // Added this line
+
+    //Clear the input fields after adding
+    document.getElementById("quote_input").value="";
+    document.getElementById("author_input").value="";
+
+    // Hide the add quote container
+    addingQuoteContainer.style.display = "none";
+    
+
+    messageBox.innerText = "New quote and author added successfully!";
+    messageBox.style.display = "block";
+    setTimeout(() => {
+      messageBox.style.display = "none";
+    }, 1000);
+    index = array.length - 1; // Show the latest added quote
+    displayQuote();
+
+  } else {
+    messageBox.innerText = "Both quote and author fields are required!";
+    messageBox.style.background = "red"; // Change background to red for error
+    messageBox.style.display = "block";
+
+    setTimeout(() => {
+      messageBox.style.display = "none";
+      messageBox.style.background = "green"; // Reset background to green
+    }, 3000);
+   
+  }
+    
+}
+
+displayQuote();
+>>>>>>> ad4ca09 (Initial commit~)
